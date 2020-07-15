@@ -3,41 +3,30 @@ import logo from './logo.svg';
 import './App.css';
 
 import Form from './Form';
-import TeamList from './TeamList';
+import NewMember from './NewMember';
 
 
 
 function App() {
-
-  const [friends, setFriends] = useState([]
-  // (initialFriendsList) {
-    {
-        name: 'Dan',
-        email: 'dantrantheasianman@email.com', 
-        role: 'always available'
-  };
-])
+  const [person, setPerson] = useState([
+  //  // (initialFriendsList) {
+  //   {
+  //       name: 'Mung Bin',
+  //       email: 'pleaseDoNotEmailMe@email.com',
+  //       role: 'person'
+  // }
+]);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Team List</h1>
+      <Form person={person} setPerson={setPerson} />
+      <NewMember person={person} />
     </div>
+
   );
-}
 
+ }
 
+ export default App;
 
-export default App;
